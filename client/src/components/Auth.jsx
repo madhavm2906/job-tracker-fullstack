@@ -20,8 +20,8 @@ function Auth({ setUser }) {
     e.preventDefault();
 
     const url = isLogin
-      ? "http://localhost:5000/api/auth/login"
-      : "http://localhost:5000/api/auth/register";
+      ? "https://job-tracker-backend-ycaz.onrender.com/api/auth/login"
+      : "https://job-tracker-backend-ycaz.onrender.com/api/auth/register";
 
     const bodyData = isLogin
       ? {
