@@ -22,16 +22,22 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <h1>Job Application Tracker</h1>
-      <JobForm
-        fetchJobs={fetchJobs}
-        editingJob={editingJob}
-        setEditingJob={setEditingJob}
-      />
-      <JobList jobs={jobs} fetchJobs={fetchJobs} setEditingJob={setEditingJob} />
-    </div>
-  );
+  <div className="app">
+    <h1>Job Application Tracker</h1>
+
+    <JobForm
+      fetchJobs={fetchJobs}
+      editingJob={editingJob}
+      setEditingJob={setEditingJob}
+    />
+
+    <JobList
+      jobs={jobs}
+      fetchJobs={fetchJobs}
+      setEditingJob={setEditingJob}
+    />
+  </div>
+);
 }
 
 export default App;

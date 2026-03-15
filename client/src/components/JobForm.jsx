@@ -55,7 +55,8 @@ function JobForm({ fetchJobs, editingJob, setEditingJob }) {
   };
 
   return (
-    <form className="job-form" onSubmit={handleSubmit}>
+  <form className="job-form" onSubmit={handleSubmit}>
+    <h2>{editingJob ? "Edit Application" : "Add New Application"}</h2>
       <input
         type="text"
         name="company"
