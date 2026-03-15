@@ -6,6 +6,7 @@ function JobForm({ fetchJobs, editingJob, setEditingJob }) {
     role: "",
     status: "Applied",
     dateApplied: "",
+    applicationLink: "",
     notes: "",
   });
 
@@ -39,11 +40,14 @@ function JobForm({ fetchJobs, editingJob, setEditingJob }) {
         body: JSON.stringify(formData),
       });
 
+      alert(editingJob ? "Job updated!" : "Job added!");
+
       setFormData({
         company: "",
         role: "",
         status: "Applied",
         dateApplied: "",
+        applicationLink: "",
         notes: "",
       });
 
@@ -88,6 +92,14 @@ function JobForm({ fetchJobs, editingJob, setEditingJob }) {
         value={formData.dateApplied}
         onChange={handleChange}
         required
+      />
+
+      <input
+        type="text"
+        name="applicationLink"
+        placeholder="Application Link"
+        value={formData.applicationLink || ""}
+        onChange={handleChange}
       />
 
       <textarea

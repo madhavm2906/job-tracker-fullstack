@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
+const authRoutes = require("./routes/auth");
+
+app.use("/api/auth", authRoutes);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

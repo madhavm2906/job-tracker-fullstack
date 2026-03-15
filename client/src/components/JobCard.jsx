@@ -39,9 +39,16 @@ function JobCard({ job, fetchJobs, setEditingJob }) {
         <p>
           <strong>Date Applied:</strong> {job.dateApplied}
         </p>
-        <p>
-          <strong>Notes:</strong> {job.notes || "No notes added"}
-        </p>
+        <p><strong>Notes:</strong> {job.notes}</p>
+
+        {job.applicationLink && (
+            <p>
+                <strong>Link:</strong>{" "}
+                <a href={job.applicationLink} target="_blank">
+                    View Application
+                </a>
+            </p>
+        )}
       </div>
 
       <div className="button-group">
